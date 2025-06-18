@@ -1,8 +1,9 @@
 from setuptools import find_packages,setup
-from typing import List
+from typing import list
 
 HYPEN_E_DOT='-e .'
-def get_requirements(file_path:str)->List[str]:
+def get_requirements(file_path:str) ->list[str]:
+
     '''
     this function will return the list of requirements
     '''
@@ -16,12 +17,15 @@ def get_requirements(file_path:str)->List[str]:
     
     return requirements
 
+## \n was replaced with blankspace beacuse when setup.py will read using readline()
+## requirements.txt there will be \n to go to the next line
+
 setup(
-name='mlproject',
+name='MLproject',
 version='0.0.1',
 author='Navjot',
 author_email='navjotkaurdhoat@gmail.com',
 packages=find_packages(),
-install_requires=get_requirements('requirements.txt')
+install_requires=get_requirements('requirements.txt') 
 
 )
